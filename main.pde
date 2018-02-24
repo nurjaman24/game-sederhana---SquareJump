@@ -1,7 +1,7 @@
 //deklarasikan hero
 Player hero;
 //deklarasikan rintangan
-rintangan[] rintangan = new rintangan[300]; 
+rintangan[] rintangan = new rintangan[200]; 
 
 int timer = 0 ;
 int mati = 0;
@@ -92,7 +92,8 @@ void waktu(){
     //jalan
     fill(120,120,120);
     noStroke();
-    rect(jalanx, jalany, jalanw, jalanh); 
+    rect(jalanx, jalany, jalanw, jalanh);
+ 
   }
 
 
@@ -142,7 +143,8 @@ void collision(){
     if(hero.getX() > rintangan[i].papanGetX2() && !rintangan[i]._abaikan){
       hero._startY = 635;
       rintangan[i].abaikan();
-    } 
+    }
+ 
    }
 }
 void timer(){
@@ -205,7 +207,8 @@ void displayControls(){
     text("Score: "+int(score), width/10, height/10);
   }
 }
-
+
+
 void gameComplete(){
   //you win text
   textAlign(CENTER);
@@ -297,7 +300,8 @@ void rintangan(){
       fill(random(200,255), random(200,255), random(200,255));
       textSize(200);
       text("level 2",width/2,height/2);
-    } 
+    }
+ 
     
     if(timer > 1650){
       rintangan[13].duri(height-60);
@@ -325,7 +329,8 @@ void rintangan(){
     
     if(timer > 2100){
       rintangan[19].duri(height-60);
-     } 
+     }
+ 
     if(timer > 2150){
       rintangan[20].duri(height-60);
     }
@@ -355,7 +360,8 @@ void rintangan(){
     
     if(timer > 2700){
       rintangan[27].duri(height-60);
-     } 
+     }
+ 
     if(timer > 2750){
       rintangan[28].duri(height-60);
     }
@@ -385,7 +391,8 @@ void rintangan(){
     
     if(timer > 3300){
       rintangan[35].duri(height-60);
-     } 
+     }
+ 
     if(timer > 3450){
       rintangan[36].duri(height-60);
     }
@@ -416,7 +423,8 @@ void rintangan(){
     }
     if(timer > 3650){
       rintangan[2].kotak(height-150);
-      rintangan[82].duri(height-60);
+      
+rintangan[82].duri(height-60);
     }
     if (timer > 3675){
       rintangan[38].duri(height-60);
@@ -494,7 +502,8 @@ void rintangan(){
     
     if(timer > 4550){
       rintangan[14].kotak(height-150);
-      rintangan[69].duri(height-60);
+      
+rintangan[69].duri(height-60);
     }
     
     if(timer > 4600){
@@ -519,7 +528,8 @@ void rintangan(){
     }
     if(timer > 4850){
       rintangan[18].kotak(height-150);
-      rintangan[65].duri(height-60);
+      
+rintangan[65].duri(height-60);
     }
     if (timer > 4875){
       rintangan[44].duri(height-60);
